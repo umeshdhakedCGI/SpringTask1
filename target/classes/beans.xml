@@ -7,12 +7,12 @@
 
 
 
-    <bean id="actor" class="com.stackroute.domain.Actor">
+    <bean id="actor1" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="saurav"></constructor-arg>
         <constructor-arg name="gender" value="male"></constructor-arg>
         <constructor-arg name="age" value="23"></constructor-arg>
     </bean>
-    <bean id="actor2" class="com.stackroute.domain.Actor">
+    <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg index="0" value="aman"></constructor-arg>
         <constructor-arg index="1" value="male"></constructor-arg>
         <constructor-arg index="2" value="22"></constructor-arg>
@@ -23,12 +23,10 @@
         <constructor-arg type="int" value="25"></constructor-arg>
     </bean>
 
-<bean id="dummy2" class="com.stackroute.domain.Movie"></bean>
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"></bean> <!--It is Using no argument Movie Constructor-->
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"></bean> <!--Using no refrence Movie Constructor-->
+   <bean id="movie2" class="com.stackroute.domain.Movie" autowire="constructor"> <!-- Using arguments Movie Constructor-->
 
-   <bean id="movie2" class="com.stackroute.domain.Movie"> <!-- Using actor reference Movie Constructor-->
-        <constructor-arg ref="actor2"></constructor-arg>
     </bean>
 
 
