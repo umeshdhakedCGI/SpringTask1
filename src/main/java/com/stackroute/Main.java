@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Task-3
+ * Task-2
  */
 public class Main
 {
