@@ -6,8 +6,13 @@ task 3
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Movie {
+
     @Autowired
- private Actor actor;
+    private Actor actor;
+
+    public Movie(){
+
+    }
 
     public Movie(Actor actor){
         this.actor = actor;

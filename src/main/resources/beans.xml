@@ -6,6 +6,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+
     <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="saurav"></constructor-arg>
         <constructor-arg name="gender" value="male"></constructor-arg>
@@ -22,12 +23,9 @@
         <constructor-arg type="int" value="25"></constructor-arg>
     </bean>
 
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"></bean> <!--It is Using no argument Movie Constructor-->
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName">  <!-- Autowire is dominant -->
-        <constructor-arg ref="actor3"></constructor-arg>
-    </bean>
-
-   <bean id="movie2" class="com.stackroute.domain.Movie">
+   <bean id="movie2" class="com.stackroute.domain.Movie"> <!-- Using arguments Movie Constructor-->
         <constructor-arg ref="actor2"></constructor-arg>
     </bean>
 
