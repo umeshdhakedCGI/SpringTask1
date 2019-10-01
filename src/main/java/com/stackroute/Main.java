@@ -15,9 +15,15 @@ public class Main
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
+        Movie move1 = context.getBean("movie1",Movie.class);
+        move1.getMovieInfo();
+        Movie move2 = context.getBean("movie2",Movie.class);
+        move2.getMovieInfo();
 
-        Movie move = context.getBean("movie",Movie.class);
-        move.getMovieInfo();
+        System.out.println(move1==move2);
+
+        Movie move3 = context.getBean("movie3",Movie.class);
+        move2.getMovieInfo();
 
     }
 }
