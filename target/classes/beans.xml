@@ -6,16 +6,15 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="actor1" class="com.stackroute.domain.Actor">
-
-        <constructor-arg index="0" value="aman"></constructor-arg>
-        <constructor-arg index="1" value="male"></constructor-arg>
-        <constructor-arg index="2" value="22"></constructor-arg>
-    </bean>
-    <bean id="actor2" class="com.stackroute.domain.Actor">
+    <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="saurav"></constructor-arg>
         <constructor-arg name="gender" value="male"></constructor-arg>
         <constructor-arg name="age" value="23"></constructor-arg>
+    </bean>
+    <bean id="actor2" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="aman"></constructor-arg>
+        <constructor-arg index="1" value="male"></constructor-arg>
+        <constructor-arg index="2" value="22"></constructor-arg>
     </bean>
     <bean id="actor3" class="com.stackroute.domain.Actor">
         <constructor-arg type="String" value="Tej"></constructor-arg>
@@ -24,12 +23,14 @@
     </bean>
 
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg  ref="actor1"/>
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName">  <!-- Autowire is dominant -->
+        <constructor-arg ref="actor3"></constructor-arg>
     </bean>
-    <bean name="movie2, movie3" class="com.stackroute.domain.Movie">
-        <constructor-arg  ref="actor2"/>
+
+   <bean id="movie2" class="com.stackroute.domain.Movie">
+        <constructor-arg ref="actor2"></constructor-arg>
     </bean>
+
 
 
 </beans>

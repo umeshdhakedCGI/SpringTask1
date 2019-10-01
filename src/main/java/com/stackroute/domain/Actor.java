@@ -1,6 +1,6 @@
 package com.stackroute.domain;
 /*
-Task 2
+Task 3
  */
 
 public class Actor {
@@ -16,17 +16,17 @@ public class Actor {
     }
 
 
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public void setAge(int age) {
-//        this.age = age;
-//    }
-//
-//    public void setGender(String gender) {
-//        this.gender = gender;
-//    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public void getName() {
         System.out.println(this.name);
