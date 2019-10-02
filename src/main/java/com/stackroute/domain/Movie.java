@@ -4,34 +4,37 @@ package com.stackroute.domain;
 task 3
  */
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Movie {
 
     @Autowired
-    private Actor actor3;
+    private Actor actor1;
+    private Actor actor2;
+    public Movie(){}
 
-    public Movie(){
-        System.out.println("cons");
+
+    public Movie(Actor actor1, Actor actor2){     // now id=actor1 will be injected inside this because of variable name
+        this.actor1= actor1;
+        this.actor2=actor2;
     }
 
-    public Movie(Actor actor3){
-        this.actor3 = actor3;
-        System.out.println("con args");
+    public void setActor1(Actor actor1) {  //now actor1 will be injected because of method name.
+        this.actor1 = actor1;
     }
-
-
-public void setActor(Actor actor3){
-    this.actor3 = actor3;
-    System.out.println("lol");
-}
-
 
 public void getMovieInfo(){
 
-    actor3.getName();
-    actor3.getAge();
-    actor3.getGender();
+    actor1.getName();
+    actor1.getAge();
+    actor1.getGender();
+    try {
+        System.out.println("just checking .......P");
+        actor2.getName();
+    }
+    catch (Exception e){
 
+    }
 }
 
 
