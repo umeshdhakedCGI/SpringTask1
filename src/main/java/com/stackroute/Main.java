@@ -17,11 +17,11 @@ public class Main
     public static void main( String[] args )
     {
 
-   //   ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+  //    ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
      //   ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
 
-        BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
+       BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
 
         Movie move1 = (Movie)factory.getBean("movie1",Movie.class);
         move1.getMovieInfo();

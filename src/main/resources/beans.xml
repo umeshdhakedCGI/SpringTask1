@@ -21,7 +21,9 @@
         <constructor-arg name="age" value="25"></constructor-arg>
     </bean>
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"></bean> <!--It is Using no argument Movie Constructor and setter method related to that variableName-->
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="constructor"></bean> <!--It is Using no argument default Movie Constructor and setter method related to that variableName-->
+
+
 
 
 </beans>
