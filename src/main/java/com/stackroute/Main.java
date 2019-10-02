@@ -19,8 +19,6 @@ public class Main
 
    //   ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-
-
      //   ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
 
         BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
@@ -28,8 +26,8 @@ public class Main
         Movie move1 = (Movie)factory.getBean("movie1",Movie.class);
         move1.getMovieInfo();
 
-        Movie move2 = (Movie)factory.getBean("movie2",Movie.class);
-        move2.getMovieInfo();
+//        Movie move2 = (Movie)factory.getBean("movie2",Movie.class);
+//        move2.getMovieInfo();
 
 
     }

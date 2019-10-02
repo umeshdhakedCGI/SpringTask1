@@ -1,34 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!--Task 2 beans -->
+<!--Task 4 beans -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
 
     <bean id="actor1" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="saurav"></constructor-arg>
         <constructor-arg name="gender" value="male"></constructor-arg>
         <constructor-arg name="age" value="23"></constructor-arg>
     </bean>
-    <bean id="actor" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0" value="aman"></constructor-arg>
-        <constructor-arg index="1" value="male"></constructor-arg>
-        <constructor-arg index="2" value="22"></constructor-arg>
+    <bean id="actor2" class="com.stackroute.domain.Actor">
+        <constructor-arg name="name" value="aman"></constructor-arg>
+        <constructor-arg name="gender" value="male"></constructor-arg>
+        <constructor-arg name="age" value="22"></constructor-arg>
     </bean>
     <bean id="actor3" class="com.stackroute.domain.Actor">
-        <constructor-arg type="String" value="Tej"></constructor-arg>
-        <constructor-arg type="String" value="male"></constructor-arg>
-        <constructor-arg type="int" value="25"></constructor-arg>
+        <constructor-arg name="name" value="Tej"></constructor-arg>
+        <constructor-arg name="gender" value="male"></constructor-arg>
+        <constructor-arg name="age" value="25"></constructor-arg>
     </bean>
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"></bean> <!--It is Using no argument Movie Constructor-->
-
-   <bean id="movie2" class="com.stackroute.domain.Movie" autowire="constructor"> <!-- Using arguments Movie Constructor-->
-
-    </bean>
-
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName"></bean> <!--It is Using no argument Movie Constructor and setter method-->
 
 
 </beans>
