@@ -23,7 +23,7 @@
 
     <bean id="movie1" class="com.stackroute.domain.Movie" autowire="constructor"></bean> <!--It is Using no argument default Movie Constructor and setter method related to that variableName-->
 
-
+    <bean id="beanlifecycle" class="com.stackroute.domain.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
 
 
 </beans>

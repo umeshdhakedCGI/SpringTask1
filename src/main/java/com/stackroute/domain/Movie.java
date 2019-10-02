@@ -70,16 +70,18 @@ public void getMovieInfo(){
 
     @Override
     public void setApplicationContext(ApplicationContext context) throws BeansException {
-this.context=context;
+        this.context=context;
+      //  System.out.println("setApplicationContext");    //Only called when ApplicationContext is used in main instead of BeanFactory
     }
 
     @Override
     public void setBeanName(String s) {
-        System.out.println("Bean name is : "+s);
+      //  System.out.println("Bean name is : "+s);
     }
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        this.factory = beanFactory;
+        this.factory = beanFactory;     // called when ApplicationContext or BeanFactory is used in main
+       // System.out.println("setBeanFactory");
     }
 }
