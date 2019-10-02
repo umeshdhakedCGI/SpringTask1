@@ -14,7 +14,7 @@ public class Movie {
     public Movie(){}
 
 
-    public Movie(Actor actor1, Actor actor2){     // now id=actor1 will be injected inside this because of variable name
+    public Movie(Actor actor1, Actor actor2){     // now id=actor1 and actor2 will be injected inside this because of variable name
         this.actor1= actor1;
         this.actor2=actor2;
     }
