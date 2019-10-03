@@ -24,7 +24,7 @@
     </bean>
 
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" scope="prototype">
+    <bean id="movie1" class="com.stackroute.domain.Movie" scope="singleton">
         <constructor-arg  ref="actor1"/>
     </bean>
     <bean name="movie2, movie3" class="com.stackroute.domain.Movie">

@@ -19,10 +19,10 @@ public class Main
         Movie move2 = context.getBean("movie2",Movie.class);
         move2.getMovieInfo();
 
-        System.out.println(move1==move2);
 
-        Movie move3 = context.getBean("movie3",Movie.class);
+
+        Movie move3 = context.getBean("movie1",Movie.class);
         move2.getMovieInfo();
-
+        System.out.println(move1==move3);
     }
 }
