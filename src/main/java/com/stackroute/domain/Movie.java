@@ -14,11 +14,9 @@ public void setActor(Actor actor){
 }
 
 
-public void getMovieInfo(){
+public void ToString(){
 
-    actor.getName();
-    actor.getAge();
-    actor.getGender();
+    System.out.println ( actor.getName()+" "+ actor.getAge()+" "+ actor.getGender());
 
 }
 

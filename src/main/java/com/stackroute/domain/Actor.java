@@ -20,19 +20,16 @@ public class Actor {
         this.gender = gender;
     }
 
-    public void getName() {
-        System.out.println(this.name);
+    public String  getName() {
+        return name;
     }
 
-    public void getGender() {
-        System.out.println(gender);
+    public String  getGender() {
+        return gender;
     }
 
-    public void getAge() {
-        System.out.println(age);
+    public int getAge() {
+        return age;
     }
 
-    public void getInfo(){
-        System.out.println("Nam ");
-    }
 }
